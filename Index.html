@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilo.css">
+    <title>Actividad 1 - CILSA</title>
+</head>
+<body>
+    <header class="header">
+        <h1>Modulo 1 - Actividad 1 - Ejercicio 1</h1>
+    </header>
+    <main>
+        <div id="contenedor1">
+            <h2>Datos Personales:</h2>
+            <h4>Nombre:</h4>
+            <input type="text" name="" id="nombre">
+            <h4>Apellido:</h4>
+            <input type="text" name="" id="apellido">
+            <h4>Edad:</h4>
+            <input type="text" name="" id="edad">
+            <br>
+            <br>
+            <br>
+            <button type="button" onclick="pasaje()">
+                Enviar
+            </button>
+        </div> 
+        <div id="contenedor2">
+        </div>
+        <script>
+            function pasaje(){
+                //capturo los input
+                nombre=document.getElementById("nombre").value;
+                salida1= document.createElement("h3");
+                salida1.innerHTML = "<strong> Nombre: </strong> "+nombre;
+                apellido=document.getElementById("apellido").value;
+                salida2= document.createElement("h3");
+                salida2.innerHTML = "<strong> Apellido: </strong> "+apellido;
+                edad=document.getElementById("edad").value;
+                salida3= document.createElement("h3");
+                salida3.innerHTML = "<strong> Edad: </strong> "+edad;
+                //preparo texto salida
+                salida0= document.createElement("h2");
+                salida0.innerText = "Usted se ha registrado con los siguientes datos:";
+                //preparo las salidas
+                const contenedor2 = document.getElementById("contenedor2");
+                contenedor2.append(salida0);
+                contenedor2.append(salida1);
+                contenedor2.append(salida2);
+                contenedor2.append(salida3);
+                return;
+            };
+        </script>   
+    </main>
+    <footer>
+        <h3>Desarrollado por Sebastian Rejon - rejon.sebastian@gmail.com - 2022</h3>
+    </footer>
+</body>
+</html>
